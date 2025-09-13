@@ -1,0 +1,21 @@
+/* Styling for TrendChip component */
+:root {
+  --chip-bg-light: #eef2ff;
+  --chip-text-light: var(--primary-accent-light);
+}
+
+body.dark {
+  --chip-bg-light: #3730a3;
+  --chip-text-light: #c7d2fe;
+}
+
+.trend-chip {
+  display: inline-block;
+  background-color: var(--chip-bg-light);
+  color: var(--chip-text-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px; /* Pill shape */
+  font-weight: 500;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}

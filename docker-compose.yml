@@ -1,0 +1,42 @@
+
+#### **`docker-compose.yml`**
+
+
+services:
+  db:
+    image: postgres:13-alpine
+    container_name: demandiq_pro_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    # USE THIS ENVIRONMENT BLOCK INSTEAD OF env_file
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend
+    container_name: demandiq_pro_backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    # This service also needs the .env file
+    env_file:
+      - ./.env # Look for .env in the root directory
+    depends_on:
+      - db
+
+  frontend:
+    build: 
+      context: ./frontend
+    container_name: demandiq_pro_frontend
+    ports:
+      - "5173:80" # Map host 5173 to container's Nginx port 80
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:

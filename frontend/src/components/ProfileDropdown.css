@@ -1,0 +1,109 @@
+/* Styling for ProfileDropdown component */
+/* Light Mode Variables */
+:root {
+  --profile-bg-light: #f3f4f6;
+  --dropdown-bg-light: var(--bg-secondary-light);
+  --dropdown-shadow-light: var(--card-shadow-light);
+  --dropdown-border-light: var(--border-light);
+}
+
+/* Dark Mode Overrides */
+body.dark {
+  --profile-bg-light: #374151;
+  --dropdown-bg-light: #1f2937;
+  --dropdown-shadow-light: var(--card-shadow-dark);
+  --dropdown-border-light: var(--border-dark);
+}
+
+.profile-container {
+  position: relative;
+  margin-top: auto; /* Pushes to the bottom */
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.profile-button:hover {
+  background-color: var(--profile-bg-light);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary-accent-light);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+body.dark .avatar {
+    background-color: var(--primary-accent-dark);
+}
+
+.profile-name {
+  font-weight: 500;
+  color: var(--text-primary-light);
+}
+body.dark .profile-name {
+  color: var(--text-primary-dark);
+}
+
+
+.profile-dropdown {
+  position: absolute;
+  bottom: 110%; /* Position above the button */
+  left: 0;
+  width: 230px;
+  background-color: var(--dropdown-bg-light);
+  border: 1px solid var(--dropdown-border-light);
+  border-radius: 8px;
+  box-shadow: var(--dropdown-shadow-light);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.dropdown-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--dropdown-border-light);
+}
+.dropdown-header .user-name {
+  font-weight: 600;
+  margin: 0;
+}
+.dropdown-header .user-email {
+  font-size: 0.875rem;
+  color: var(--text-secondary-light);
+  margin: 0.25rem 0 0 0;
+}
+body.dark .dropdown-header .user-email {
+  color: var(--text-secondary-dark);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 500;
+}
+.dropdown-item:hover {
+  background-color: var(--profile-bg-light);
+}
+
+.dropdown-item.logout {
+    color: #ef4444;
+}

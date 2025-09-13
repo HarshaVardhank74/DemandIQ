@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Font */
+  --font-sans: 'Inter', sans-serif;
+
+  /* Light Theme Colors */
+  --bg-primary-light: linear-gradient(180deg, #f9fafb 0%, #f3f4f6 100%);
+  --bg-secondary-light: #ffffff;
+  --bg-sidebar-light: #ffffff;
+  --text-primary-light: #111827;
+  --text-secondary-light: #6b7280;
+  --border-light: #e5e7eb;
+  --primary-accent-light: #4f46e5;
+  --secondary-accent-light: #6366f1;
+  --chart-color-1-light: #4f46e5;
+  --chart-color-2-light: #ef4444;
+  --chart-grid-light: #e5e7eb;
+  
+  /* Glassmorphism/Neumorphism Effects - Light */
+  --card-shadow-light: 0 8px 32px 0 rgba(107, 114, 128, 0.2);
+  --card-bg-light: rgba(255, 255, 255, 0.85);
+  --card-border-light: 1px solid rgba(255, 255, 255, 0.18);
+  --card-backdrop-blur: 10px;
+
+  /* Dark Theme Colors */
+  --bg-primary-dark: linear-gradient(180deg, #111827 0%, #1f2937 100%);
+  --bg-secondary-dark: #1f2937;
+  --bg-sidebar-dark: #111827;
+  --text-primary-dark: #f9fafb;
+  --text-secondary-dark: #9ca3af;
+  --border-dark: #374151;
+  --primary-accent-dark: #818cf8;
+  --secondary-accent-dark: #38bdf8;
+  --chart-color-1-dark: #818cf8;
+  --chart-color-2-dark: #f472b6;
+  --chart-grid-dark: #374151;
+
+  /* Glassmorphism/Neumorphism Effects - Dark */
+  --card-shadow-dark: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --card-bg-dark: rgba(31, 41, 55, 0.75);
+  --card-border-dark: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg-primary-light);
+  color: var(--text-primary-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background: var(--bg-primary-dark);
+  color: var(--text-primary-dark);
+}

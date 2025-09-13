@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+gunicorn
+pandas
+prophet
+sqlalchemy
+psycopg2-binary
+python-dotenv
+passlib[bcrypt]==1.7.4  # Lock passlib version
+bcrypt==3.2.0           # Lock bcrypt version
+python-jose[cryptography]
+pytrends
+pydantic>=2.0
+pydantic-settings
+python-multipart
+scikit-learn
+xgboost

@@ -1,0 +1,33 @@
+.forecast-fixed-header {
+    position: sticky;
+    top: 0;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    z-index: 5;
+    background: var(--bg-primary-light);
+    transition: background-color 0.3s ease;
+}
+
+body.dark .forecast-fixed-header {
+    background: var(--bg-primary-dark);
+}
+
+
+/* Adds a shadow when you scroll past the header */
+.forecast-fixed-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border-light);
+    transition: background-color 0.3s ease;
+}
+body.dark .forecast-fixed-header::after {
+    background: var(--border-dark);
+}
+
+.forecast-results {
+    padding-top: 1rem;
+}
