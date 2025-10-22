@@ -6,7 +6,7 @@ import axios from 'axios';
 // because Nginx serves the static files and the browser makes the API calls
 // from the user's machine to the mapped port.
 const api = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: 'https://demandiq-pro-api.onrender.com',
 });
 
 // Interceptor to add the JWT token to every request if it exists
