@@ -88,3 +88,28 @@ Follow these instructions to get the project up and running on your local machin
 You can now register a new user, log in, and start using the DemandIQ Pro application.
 
 ---
+---
+
+## 📸 Application Screenshots
+
+Showcasing the sleek, modern, and animated interface of DemandIQ Pro. The entire application supports a beautiful mode for a better user experience.
+
+### Main Dashboard
+*(Provides a high-level overview of key metrics with animated, "glassmorphism" styled KPI cards.)*
+<div align="center">
+  <img src="./screenshots/dashboard.png" alt="Dashboard Page in Dark Mode" width="800"/>
+</div>
+
+### Advanced Demand Forecasting
+*(The core forecasting tool, showing historical data for "iPhone" and a 52-week future prediction using the Prophet model. The chart is fully interactive with zoom and pan functionality.)*
+<div align="center">
+  <img src="./screenshots/forecasting.png" alt="Forecasting Page in Dark Mode" width="800"/>
+</div>
+
+### Keyword Opportunity Analysis
+*(The analysis page, demonstrating "Top" and "Rising" related queries for the term "laptop". This view uses pill-shaped chips and progress bars to visualize emerging trends.)*
+<div align="center">
+  <img src="./screenshots/analysis.png" alt="Keyword Analysis Page in Dark Mode" width="800"/>
+</div>
+
+---
